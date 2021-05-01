@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${t}">Title</title>
+</head>
+<body>
+<h1 th:text="${mav}">mav</h1>
+<span th:text="'欢迎您,'+${name}+'!'"></span>
+<div th:switch="${role}">
+    <p th:case="admin">管理员</p>
+    <p th:case="vip">会员</p>
+    <p th:case="*">普通会员</p>
+</div>
+</body>
+</html>
